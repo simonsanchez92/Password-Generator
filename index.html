@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="app">
+        <h2>Generate your password!</h2>
+        <div id="options">
+            <label for=""><input class='change' id='simbols' type="checkbox">Simbols</label>
+            <label for=""><input class='change' id='lower' type="checkbox">LowerCase</label>
+            <label for=""><input class='change' id='upper' type="checkbox">Uppercase</label>
+        </div>
+        <div id="characters">
+            <label for=""><input class='change' name='rad' id='eight' type="radio">8 Characters</label>
+            <label for=""><input class='change' name='rad' id='sixteen' type="radio">16 Characters</label>
+            <label for=""><input class='change' name='rad' id='thirtyTwo' type="radio">32 Characters</label>
+        </div>
+
+        <input type="button" value="Generate">
+        <input id='clipboard' type="button" value="Copy">
+
+        <h4>Your New Password:</h4>
+
+        <h3 id='result'></h3>
+        <h4 id='copied'>Copied!</h4>
+
+
+
+
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+
+</html>

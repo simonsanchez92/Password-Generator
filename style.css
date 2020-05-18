@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+body {
+    background-color: #DAE7DD;
+}
+
+#app {
+    margin: 0 auto;
+    margin-top: 45px;
+    text-align: center;
+    width: 550px;
+    border: 1px solid black;
+    border-radius: 6px;
+    background-color: #F6EFE0;
+    -webkit-box-shadow: 5px 6px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 5px 6px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 5px 6px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+#app h2 {
+    border-radius: 6px 6px 0 0;
+    padding: 25px 0;
+    background-color: #EC7673;
+}
+
+#app h4 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#options {
+    margin: 50px 0;
+}
+
+#options label {
+    margin: 0 25px;
+}
+
+#options input {
+    margin-right: 10px;
+    transform: scale(1.6)
+}
+
+#app input[type='button'] {
+    margin: 50px 0;
+    padding: 25px;
+    border-radius: 5px;
+
+}
+
+#characters label {
+    margin: 0 25px;
+}
+
+#characters input {
+    margin-right: 5px;
+    transform: scale(1.6);
+
+}
+
+#app input[type='button']:hover {
+    cursor: pointer;
+}
+
+
+
+#result {
+
+    font-size: 24px;
+    color: rgb(110, 13, 97);
+    margin-right: 10px;
+    padding: 0 15px;
+}
+
+#clipboard {
+    visibility: hidden;
+}
+
+#result-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#copied {
+    padding-top: 15px;
+    display: none;
+}
