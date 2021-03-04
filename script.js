@@ -1,6 +1,7 @@
 let result = document.querySelector('#result');
 
 let simbols = document.querySelector('#simbols');
+let numbers = document.querySelector('#numbers');
 let lower = document.querySelector('#lower');
 let upper = document.querySelector('#upper');
 
@@ -9,21 +10,17 @@ let sixChar = document.querySelector('#sixteen');
 let thirChar = document.querySelector('#thirtyTwo');
 
 
-let allBoxes = document.querySelectorAll('.change');
-let boxes = [...allBoxes];
-let btn = document.querySelector('#app input[type="button"]');
+let boxes = [... document.querySelectorAll('.change')];
+
+let btn = document.getElementById('generator');
 let clipb = document.querySelector('#clipboard');
 let copied = document.querySelector('#copied');
 
 
 let simb = '!$%&/()=?¿@^*Ç¨´_-';
+let nums = '0123456789';
 let low = 'qwertyuiopasdfghjklñzxcvbnm';
 let up = 'QWERTYUIOPASDFGHJKLÑZXCVBNM';
-
-
-
-
-
 
 
 function generatePassword() {
@@ -33,9 +30,14 @@ function generatePassword() {
     if (simbols.checked) {
         password += simb;
     }
+
+    if (numbers.checked) {
+        password += nums;
+    }
     if (lower.checked) {
         password += low;
-    } if (upper.checked) {
+    } 
+    if (upper.checked) {
         password += up;
     }
 
@@ -60,12 +62,13 @@ function generatePassword() {
 
     result.innerHTML = (key.join(''));
     password = key.join('');
+
     if (password != '') {
-        clipb.style.visibility = 'visible';
-        copied.style.display = 'none';
+        copied.style.visibility = 'hidden';
     }
 
 
+   
     clipb.addEventListener('click', (e) => {
         // Create new element
         var el = document.createElement('textarea');
@@ -81,12 +84,13 @@ function generatePassword() {
         document.execCommand('copy');
         // Remove temporary element
         document.body.removeChild(el);
-        copied.style.display = 'block';
+        copied.style.visibility = 'visible';
     });
+
 
     boxes.forEach(box => {
         box.addEventListener('click', () => {
-            copied.style.display = 'none';
+            copied.style.visibility = 'hidden';
         })
     })
 }

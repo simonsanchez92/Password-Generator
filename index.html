@@ -7,6 +7,7 @@
     <title>Password Generator</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/28240eb085.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -23,18 +24,17 @@
             </div>
             <div id="characters">
        
-                    <label for="eight"><input class='change' name='rad' id='eight' type="radio">8 Characters</label>
+                    <label for="eight"><input class='change' name='rad' id='eight' type="radio" checked>8 Characters</label>
                     <label for="sixteen"><input class='change' name='rad' id='sixteen' type="radio">16 Characters</label>
                     <label for="thirtyTwo"><input class='change' name='rad' id='thirtyTwo' type="radio">32 Characters</label>
             
                </div>
         </div>
       
-
-        <input type="button" value="Generate">
-        <input id='clipboard' type="button" value="Copy">
-
-        <h4>Your New Password:</h4>
+        <div class="btns-container">
+            <button id='generator'>Generate</button>
+            <button id='clipboard'><i class="far fa-save"></i></button>
+        </div>
 
         <div class="result-container">
 
