@@ -7,14 +7,20 @@
 
 body {
     background-color: #DAE7DD;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 20px; */
 }
 
 #app {
-    margin: 0 auto;
-    margin-top: 45px;
+    margin: 0 20px;
+    /* margin-top: 45px; */
     text-align: center;
     width: 550px;
-    border: 1px solid black;
+    max-width: 100%;
+    /* border: 2px solid black; */
     border-radius: 6px;
     background-color: #F6EFE0;
     -webkit-box-shadow: 5px 6px 5px 0px rgba(0, 0, 0, 0.75);
@@ -30,21 +36,36 @@ body {
 
 #app h4 {
     font-size: 32px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
+
+.options-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+
 #options {
-    margin: 50px 0;
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    /* padding: 20px 0; */
 }
 
 #options label {
-    margin: 0 25px;
+   font-size: 1.2rem;
+   text-align: left;
+   padding: 15px;
 }
 
-#options input {
+#options input[type='checkbox'] {
     margin-right: 10px;
-    transform: scale(1.6)
+    transform: scale(1.2)
 }
+
 
 #app input[type='button'] {
     margin: 50px 0;
@@ -53,13 +74,29 @@ body {
 
 }
 
+#characters{
+    border-left: 2px solid #000000;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.character-container{
+
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-content: left;
+}
+
 #characters label {
+   font-size: 1.2rem;
     margin: 0 25px;
 }
 
 #characters input {
     margin-right: 5px;
-    transform: scale(1.6);
+    transform: scale(1.2);
 
 }
 
@@ -67,14 +104,18 @@ body {
     cursor: pointer;
 }
 
+.result-container{
+    height: 95px;
+    background-color: #be3634dc;
+    position: relative;
 
+}
 
 #result {
-
-    font-size: 24px;
-    color: rgb(110, 13, 97);
+    font-size: 18px;
+    color: rgb(238, 227, 236);
     margin-right: 10px;
-    padding: 0 15px;
+    padding:  15px;
 }
 
 #clipboard {
@@ -89,6 +130,9 @@ body {
 }
 
 #copied {
-    padding-top: 15px;
-    display: none;
+    position: absolute;
+    bottom: 0px;
+    right:0;
+    width: 100%;
+
 }

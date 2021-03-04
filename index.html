@@ -13,28 +13,35 @@
 
     <div id="app">
         <h2>Generate your password!</h2>
-        <div id="options">
-            <label for=""><input class='change' id='simbols' type="checkbox">Simbols</label>
-            <label for=""><input class='change' id='lower' type="checkbox">LowerCase</label>
-            <label for=""><input class='change' id='upper' type="checkbox">Uppercase</label>
+
+        <div class="options-container">
+            <div id="options">
+                <label for="lower"><input class='change' id='lower' type="checkbox">LowerCase</label>
+                <label for="upper"><input class='change' id='upper' type="checkbox">Uppercase</label>
+                <label for="numbers"><input class='change' id='numbers' type="checkbox">Numbers</label>
+                <label for="simbols"><input class='change' id='simbols' type="checkbox">Simbols</label>
+            </div>
+            <div id="characters">
+       
+                    <label for="eight"><input class='change' name='rad' id='eight' type="radio">8 Characters</label>
+                    <label for="sixteen"><input class='change' name='rad' id='sixteen' type="radio">16 Characters</label>
+                    <label for="thirtyTwo"><input class='change' name='rad' id='thirtyTwo' type="radio">32 Characters</label>
+            
+               </div>
         </div>
-        <div id="characters">
-            <label for=""><input class='change' name='rad' id='eight' type="radio">8 Characters</label>
-            <label for=""><input class='change' name='rad' id='sixteen' type="radio">16 Characters</label>
-            <label for=""><input class='change' name='rad' id='thirtyTwo' type="radio">32 Characters</label>
-        </div>
+      
 
         <input type="button" value="Generate">
         <input id='clipboard' type="button" value="Copy">
 
         <h4>Your New Password:</h4>
 
-        <h3 id='result'></h3>
-        <h4 id='copied'>Copied!</h4>
+        <div class="result-container">
 
-
-
-
+            <h3 id='result'></h3>
+            <h4 id='copied'>Copied!</h4>
+        </div>
+        
     </div>
 
 
